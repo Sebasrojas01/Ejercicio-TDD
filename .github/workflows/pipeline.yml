@@ -57,3 +57,11 @@ jobs:
 
       - name: Cargar archios de funciones al bucket
         run:  aws s3 cp funciones.py s3://tddbucket
+        
+      - name: Actualización de Lambda
+        run: |
+          cd /home/ubuntu/environment/TDD/Lambda2
+          zappa update dev
+          
+          cd /home/ubuntu/environment/TDD/Lambda1
+          zappa update dev
