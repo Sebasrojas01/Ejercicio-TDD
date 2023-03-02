@@ -60,8 +60,8 @@ jobs:
         
       - name: Actualización de Lambda
         run: |
-          cd /home/ubuntu/environment/TDD/Lambda2
+          cd Ejercicio-TDD/Lambda1/
           zappa update dev
           
-          cd /home/ubuntu/environment/TDD/Lambda1
+          cd Ejercicio-TDD/Lambda2/
           zappa update dev
