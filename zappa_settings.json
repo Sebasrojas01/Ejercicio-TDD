@@ -1,0 +1,16 @@
+{
+    "dev": {
+        "app_function": "apps.f",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "tdd",
+        "runtime": "python3.8",
+        "s3_bucket": "dolar-call"
+        "keep_warm": false,
+        "role_name": "LabRole",
+        "manage_roles": false,
+        "apigateway_enabled": false,
+        "runtime": "python3.8",
+
+    }
+}
