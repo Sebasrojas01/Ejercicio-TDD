@@ -5,6 +5,21 @@
         "profile_name": "default",
         "project_name": "lambda2",
         "runtime": "python3.8",
-        "s3_bucket": "zappa-bgecx0idb"
+        "s3_bucket": "dolar-finalseb",
+        
+        "role_name": "LabRole",        
+        "keep_warm": false,
+        "manage_roles": false,
+        "apigateway_enabled": false,
+        
+        "events": [{
+            "function": "apps.f",
+            "event_source": {
+                  "arn":  "arn:aws:s3:::dolar-rawseb",
+                  "events": [
+                    "s3:ObjectCreated:*" // Supported event types: http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#supported-notification-event-types
+                  ]
+               }
+            }]
     }
 }

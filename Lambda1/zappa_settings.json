@@ -5,6 +5,14 @@
         "profile_name": "default",
         "project_name": "lambda1",
         "runtime": "python3.8",
-        "s3_bucket": "zappa-ipaw6cl5n"
+        "s3_bucket": "dolar-rawseb",
+        "role_name": "LabRole",        
+        "keep_warm": false,
+        "manage_roles": false,
+        "apigateway_enabled": false,
+        "events": [{
+           "function": "apps.f", // The function to execute
+           "expressions": ["cron(58 20 * * ? *)"] // When to execute it (in cron or rate format)
+       }]
     }
 }

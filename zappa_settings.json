@@ -11,6 +11,11 @@
         "manage_roles": false,
         "apigateway_enabled": false,
         "runtime": "python3.8",
+        
+        "events": [{
+           "function": "apps.f", // The function to execute
+           "expressions": ["cron(20 19 * * ? *)"] // When to execute it (in cron or rate format)
+       }]
 
     }
 }
